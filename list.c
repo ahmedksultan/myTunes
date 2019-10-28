@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "list.h"
 
 /* --- INSTRUCTIONS ---
@@ -16,14 +17,16 @@ free the entire list
 
 void print_list(struct song * list) {
     while (list != NULL) {
-        printf("%s : %s | ", list->name, list->artist);
+        printf("%s: %s | ", list->artist, list->name);
         list = list->next;
     }
+    printf("\n");
 }
 
 struct song * insert_front(struct song * list, char * name, char * artist) {
     struct song * new = malloc(sizeof(struct song));
-    new->name = name;
-    new->artist = artist;
+    strcpy(new->name, name);
+    strcpy(new->artist, artist);
+    new->next = list;
     return new;
 }
