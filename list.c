@@ -15,7 +15,7 @@ remove a single specified node from the list
 free the entire list
 --- INSTRUCTIONS --- */
 
-void print_list(struct song * list) {
+void print_list(struct song* list) {
     while (list != NULL) {
         printf("%s: %s | ", list->artist, list->name);
         list = list->next;
@@ -23,8 +23,8 @@ void print_list(struct song * list) {
     printf("\n");
 }
 
-struct song * insert_front(struct song * list, char * name, char * artist) {
-    struct song * new = malloc(sizeof(struct song));
+struct song* insert_front(struct song* list, char* name, char* artist) {
+    struct song* new = malloc(sizeof(struct song));
     strcpy(new->name, name);
     strcpy(new->artist, artist);
     new->next = list;

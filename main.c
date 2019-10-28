@@ -4,7 +4,7 @@
 #include "list.h"
 
 int main() {
-    struct song * song_list = NULL;
+    struct song* song_list = NULL;
     printf("\nAdding items to list...\n");
     song_list = insert_front(song_list, "Runaway", "Kanye West");
     song_list = insert_front(song_list, "Mr. Brightside", "The Killers");
