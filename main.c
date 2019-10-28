@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "headers.h"
+#include "list.h"
 
 int main() {
     struct node * SONG_LIST = NULL;

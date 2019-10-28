@@ -1,11 +1,11 @@
-all: main.o functions.o
-	gcc -o program main.o functions.o
+all: main.o list.o
+	gcc -o program main.o list.o
 
-main.o: main.c headers.h
-	gcc -c main.c functions.c
+main.o: main.c list.h
+	gcc -c main.c list.c
 
-functions.o: functions.c headers.h
-	gcc -c functions.c
+list.o: list.c list.h
+	gcc -c list.c
 
 run:
 	./program
