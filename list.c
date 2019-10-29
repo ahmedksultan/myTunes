@@ -17,7 +17,7 @@ free the entire list
 
 void print_list(struct song* list) {
     while (list != NULL) {
-        printf("%s: %s | ", list->artist, list->name);
+        printf("%s, by %s | ", list->name, list->artist );
         list = list->next;
     }
     printf("\n");
