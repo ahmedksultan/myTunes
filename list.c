@@ -17,7 +17,7 @@ free the entire list
 
 void print_list(struct song* list) {
     while (list != NULL) {
-        printf("%s: %s | ", list->artist, list->name);
+        printf(" %s: %s |", list->artist, list->name);
         list = list->next;
     }
     printf("\n");
@@ -29,4 +29,18 @@ struct song* insert_front(struct song* list, char* name, char* artist) {
     strcpy(new->artist, artist);
     new->next = list;
     return new;
+}
+
+struct song* insert_ordered(struct song* list, char* name char* artist) {
+    if (strcmp(artist, current->artist) > 0) {
+        do {
+            current = current->next;
+        } while (strcmp(current->artist, artist));
+    }
+    if (strcmp(name, current->name) > 0) {
+        do {
+            current = current->next;
+        } while (strcmp(current->name, name) > 0 && !strcmp(current->artist, artist));
+    }
+    insert_front(current, name, artist);
 }
