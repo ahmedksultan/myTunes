@@ -31,16 +31,35 @@ struct song* insert_front(struct song* list, char* name, char* artist) {
     return new;
 }
 
-struct song* insert_ordered(struct song* list, char* name char* artist) {
-    if (strcmp(artist, current->artist) > 0) {
-        do {
-            current = current->next;
-        } while (strcmp(current->artist, artist));
+struct song* insert_ordered(struct song* list, char* name, char* artist) {
+    struct song* current = list;
+    struct song* prev = NULL;
+
+    if (current == NULL) {
+        return insert_front(list, name, artist);
     }
-    if (strcmp(name, current->name) > 0) {
-        do {
-            current = current->next;
-        } while (strcmp(current->name, name) > 0 && !strcmp(current->artist, artist));
+
+    int cmpArtist = strcmp(artist, current->artist);
+    int cmpName = strcmp(name, current->name);
+
+    if (cmpArtist < 0 || (cmpArtist == 0 && cmpName <= 0)) {
+        return insert_front(list, name, artist);
     }
-    insert_front(current, name, artist);
+
+    while (current != NULL) {
+        cmpArtist = strcmp(artist, current->artist);
+        cmpName = strcmp(name, current->name);
+        if (cmpArtist < 0 || (cmpArtist == 0 && cmpName < 0)) {
+            prev->next = insert_front(current, name, artist);
+            return list;
+        }
+        prev = current;
+        current = current->next;
+    }
+    struct song* new = malloc(sizeof(struct song));
+    strcpy(new->name, name);
+    strcpy(new->artist, artist);
+    new->next = NULL;
+    prev->next = new;
+    return list;
 }
