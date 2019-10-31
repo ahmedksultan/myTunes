@@ -63,3 +63,20 @@ struct song* insert_ordered(struct song* list, char* name, char* artist) {
     prev->next = new;
     return list;
 }
+
+struct song* remove_song(struct song* list, struct song* target) {
+    if (list == NULL) return list;
+    struct song* current = list;
+    while (current->next != NULL) {
+        if (current->next == target) {
+            current->next = target->next;
+            free(target);
+            return list;
+        }
+        current = current->next;
+    }
+    if (current == target) {
+        free(current);
+    }
+    return NULL;
+}
