@@ -1,14 +1,19 @@
+ifdef MEM
+	DATA  = -g
+	VG = valgrind --leak-check=full
+endif
+
 all: main.o list.o
-	gcc -o program main.o list.o
+	gcc $(DATA) -o program main.o list.o
 
 main.o: main.c list.h
-	gcc -c main.c list.c
+	gcc $(DATA) -c main.c list.c
 
 list.o: list.c list.h
-	gcc -c list.c
+	gcc $(DATA) -c list.c
 
 run:
-	./program
+	$(VG) ./program
 
 clean:
 	rm *.o
