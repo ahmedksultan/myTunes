@@ -57,4 +57,10 @@ int main() {
 
     printf("List: ");
     print_list(song_list);
+
+    printf("___________________________\nFreeing list...\n");
+
+    song_list = free_list(song_list);
+    printf("List: ");
+    print_list(song_list);
 }
