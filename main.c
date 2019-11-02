@@ -6,7 +6,7 @@
 int main() {
     struct song* song_list = NULL;
 
-    printf("\nAdding items to list...\n");
+    printf("\nAdding items to list... [insert_front]\n");
     song_list = insert_front(song_list, "Runaway", "Kanye West");
     song_list = insert_front(song_list, "Coldest Winter", "Kanye West");
     song_list = insert_front(song_list, "Saint Pablo", "Kanye West");
@@ -28,13 +28,13 @@ int main() {
     song_list = insert_front(song_list, "Clint Eastwood", "Gorillaz");
     printf("List: ");
     print_list(song_list);
-    printf("___________________________\nFreeing list...\n");
+    printf("___________________________\n\nFreeing list... [free_list]\n");
 
     song_list = free_list(song_list);
     printf("List: ");
     print_list(song_list);
 
-    printf("___________________________\nAdding items in order...\n");
+    printf("___________________________\n\nAdding items in order... [insert_ordered]\n");
     song_list = insert_ordered(song_list, "Runaway", "Kanye West");
     song_list = insert_ordered(song_list, "Coldest Winter", "Kanye West");
     song_list = insert_ordered(song_list, "Saint Pablo", "Kanye West");
@@ -58,7 +58,7 @@ int main() {
     printf("List: ");
     print_list(song_list);
 
-    printf("___________________________\nFreeing list...\n");
+    printf("___________________________\n\nFreeing list... [free_list]\n");
 
     song_list = free_list(song_list);
     printf("List: ");
