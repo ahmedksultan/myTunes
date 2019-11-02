@@ -84,14 +84,36 @@ int main() {
 
     printf("___________________________\n\nFinding song: 'Lift', by Radiohead [find_song]\n");
     struct song * test = find_song(song_list, "Lift", "Radiohead");
+    printf("List: ");
     print_list(test);
 
     printf("___________________________\n\nFinding song: 'Runaway', by Kanye West [find_song]\n");
     test = find_song(song_list, "Runaway", "Kanye West");
+    printf("List: ");
     print_list(test);
 
     printf("___________________________\n\nFinding song: 'Devil In A New Dress', by Kanye West [find_song]\n");
     test = find_song(song_list, "Devil In A New Dress", "Kanye West");
+    printf("List: ");
     print_list(test);
 
+    printf("___________________________\n\nFinding first song by artist: Gorillaz [find_artist]\n");
+    test = find_artist(song_list, "Gorillaz");
+    printf("List: ");
+    print_list(test);
+
+    printf("___________________________\n\nFinding first song by artist: Kanye West [find_artist]\n");
+    test = find_artist(song_list, "Kanye West");
+    printf("List: ");
+    print_list(test);
+
+    printf("___________________________\n\nFinding first song by artist: Green Day [find_artist]\n");
+    test = find_artist(song_list, "Green Day");
+    printf("List: ");
+    print_list(test);
+
+    printf("___________________________\n\nFinding first song by artist: ABBA [find_artist]\n");
+    test = find_artist(song_list, "ABBA");
+    printf("List: ");
+    print_list(test);
 }

@@ -99,3 +99,13 @@ struct song * find_song(struct song * list, char * name, char * artist) {
     }
     return NULL;
 }
+
+struct song * find_artist(struct song * list, char * artist) {
+    while(list != NULL) {
+        if (strcmp(list->artist, artist) == 0) {
+            return list;
+        }
+        list = list -> next;
+    }
+    return NULL;
+}
