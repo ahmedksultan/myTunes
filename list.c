@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h> 
 #include "list.h"
 
 /* --- INSTRUCTIONS ---
@@ -9,10 +10,10 @@ insert nodes in order [completed]
     alphabetical by Artist then by Song
 print the entire list [completed]
 find and return a pointer to a node based on artist and song name [completed]
-find and return a pointer to the first song of an artist based on artist name
+find and return a pointer to the first song of an artist based on artist name [completed]
 Return a pointer to random element in the list.
-remove a single specified node from the list
-free the entire list
+remove a single specified node from the list [completed]
+free the entire list [completed]
 --- INSTRUCTIONS --- */
 
 void print_list(struct song* list) {
@@ -106,6 +107,25 @@ struct song * find_artist(struct song * list, char * artist) {
             return list;
         }
         list = list -> next;
+    }
+    return NULL;
+}
+
+struct song * random_song(struct song * list) {
+    struct song * list2 = list;
+    int track_count = 0;
+    while(list != NULL) {
+        track_count = track_count + 1;
+        list = list->next;
+    }
+    int track_target = (rand() % track_count);
+    int ctr = 0;
+    while(list2 != NULL) {
+        if (ctr == track_target) {
+            return list2;
+        }
+        ctr++;
+        list2 = list2->next;
     }
     return NULL;
 }
