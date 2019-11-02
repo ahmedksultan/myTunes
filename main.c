@@ -27,7 +27,7 @@ int main() {
     song_list = insert_front(song_list, "Clint Eastwood", "Gorillaz");
     printf("List: ");
     print_list(song_list);
-    
+
     printf("___________________________\n\nFreeing list... [free_list]\n");
     song_list = free_list(song_list);
     printf("List: ");
@@ -85,16 +85,13 @@ int main() {
     printf("___________________________\n\nFinding song: 'Lift', by Radiohead [find_song]\n");
     struct song * test = find_song(song_list, "Lift", "Radiohead");
     print_list(test);
-    free_list(test);
 
     printf("___________________________\n\nFinding song: 'Runaway', by Kanye West [find_song]\n");
     test = find_song(song_list, "Runaway", "Kanye West");
     print_list(test);
-    free_list(test);
 
     printf("___________________________\n\nFinding song: 'Devil In A New Dress', by Kanye West [find_song]\n");
     test = find_song(song_list, "Devil In A New Dress", "Kanye West");
     print_list(test);
-    free_list(test);
 
 }
