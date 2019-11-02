@@ -4,11 +4,11 @@
 #include "list.h"
 
 /* --- INSTRUCTIONS ---
-insert nodes at the front
-insert nodes in order
-alphabetical by Artist then by Song
-print the entire list
-find and return a pointer to a node based on artist and song name
+insert nodes at the front [completed]
+insert nodes in order [completed]
+    alphabetical by Artist then by Song
+print the entire list [completed]
+find and return a pointer to a node based on artist and song name [completed]
 find and return a pointer to the first song of an artist based on artist name
 Return a pointer to random element in the list.
 remove a single specified node from the list
@@ -88,4 +88,14 @@ struct song* free_list(struct song* list) {
         list = remove_song(list, list);
     }
     return list;
+}
+
+struct song * find_song(struct song * list, char * name, char * artist) {
+    while (list != NULL) {
+        if (!(strcmp(list->name, name) || strcmp(list->artist, artist))) {
+            return list;
+        }
+        list = list->next;
+    }
+    return NULL;
 }
