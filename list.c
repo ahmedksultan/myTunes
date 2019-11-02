@@ -11,7 +11,7 @@ insert nodes in order [completed]
 print the entire list [completed]
 find and return a pointer to a node based on artist and song name [completed]
 find and return a pointer to the first song of an artist based on artist name [completed]
-Return a pointer to random element in the list.
+Return a pointer to random element in the list. [completed]
 remove a single specified node from the list [completed]
 free the entire list [completed]
 --- INSTRUCTIONS --- */
@@ -28,7 +28,7 @@ struct song* insert_front(struct song* list, char* name, char* artist) {
     struct song* new = malloc(sizeof(struct song));
     strcpy(new->name, name);
     strcpy(new->artist, artist);
-    new->next = list;
+    new->next = list; 
     return new;
 }
 
