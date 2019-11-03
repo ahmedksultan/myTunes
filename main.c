@@ -8,24 +8,19 @@ int main() {
     struct song* song_list = NULL;
 
     printf("\nAdding items to list... [insert_front]\n");
-    song_list = insert_front(song_list, "Runaway", "Kanye West");
-    song_list = insert_front(song_list, "Coldest Winter", "Kanye West");
-    song_list = insert_front(song_list, "Saint Pablo", "Kanye West");
-    song_list = insert_front(song_list, "Blood On The Leaves", "Kanye West");
-    song_list = insert_front(song_list, "Fluorescent Adolescent", "Arctic Monkeys");
-    song_list = insert_front(song_list, "Mr. Brightside", "The Killers");
-    song_list = insert_front(song_list, "Champagne Supernova", "Oasis");
-    song_list = insert_front(song_list, "American Idiot", "Green Day");
-    song_list = insert_front(song_list, "Lift", "Radiohead");
-    song_list = insert_front(song_list, "Otherside", "Red Hot Chili Peppers");
-    song_list = insert_front(song_list, "See You Again", "Tyler, The Creator");
-    song_list = insert_front(song_list, "Basket Case", "Green Day");
-    song_list = insert_front(song_list, "21 Guns", "Green Day");
-    song_list = insert_front(song_list, "Somebody Told Me", "The Killers");
-    song_list = insert_front(song_list, "Mr. Blue Sky", "Electric Light Orchestra");
-    song_list = insert_front(song_list, "On Melancholy Hill", "Gorillaz");
-    song_list = insert_front(song_list, "Snow (Hey Oh)", "Red Hot Chili Peppers");
-    song_list = insert_front(song_list, "Clint Eastwood", "Gorillaz");
+    song_list = insert_front(song_list, "runaway", "kanye west");
+    song_list = insert_front(song_list, "coldest winter", "kanye west");
+    song_list = insert_front(song_list, "saint pablo", "kanye west");
+    song_list = insert_front(song_list, "blood on the leaves", "kanye west");
+    song_list = insert_front(song_list, "basket case", "green day");
+    song_list = insert_front(song_list, "fluorescent adolescent", "arctic monkeys");
+    song_list = insert_front(song_list, "mr. brightside", "the killers");
+    song_list = insert_front(song_list, "clint eastwood", "gorillaz");
+    song_list = insert_front(song_list, "champagne supernova", "oasis");
+    song_list = insert_front(song_list, "american idiot", "green day");
+    song_list = insert_front(song_list, "lift", "radiohead");
+    song_list = insert_front(song_list, "21 guns", "green day");
+    song_list = insert_front(song_list, "on melancholy hill", "gorillaz");
     printf("List: ");
     print_list(song_list);
 
@@ -35,24 +30,19 @@ int main() {
     print_list(song_list);
 
     printf("___________________________\n\nAdding items in order... [insert_ordered]\n");
-    song_list = insert_ordered(song_list, "Runaway", "Kanye West");
-    song_list = insert_ordered(song_list, "Coldest Winter", "Kanye West");
-    song_list = insert_ordered(song_list, "Saint Pablo", "Kanye West");
-    song_list = insert_ordered(song_list, "Blood On The Leaves", "Kanye West");
-    song_list = insert_ordered(song_list, "Fluorescent Adolescent", "Arctic Monkeys");
-    song_list = insert_ordered(song_list, "Mr. Brightside", "The Killers");
-    song_list = insert_ordered(song_list, "Champagne Supernova", "Oasis");
-    song_list = insert_ordered(song_list, "American Idiot", "Green Day");
-    song_list = insert_ordered(song_list, "Lift", "Radiohead");
-    song_list = insert_ordered(song_list, "Otherside", "Red Hot Chili Peppers");
-    song_list = insert_ordered(song_list, "See You Again", "Tyler, The Creator");
-    song_list = insert_ordered(song_list, "Basket Case", "Green Day");
-    song_list = insert_ordered(song_list, "21 Guns", "Green Day");
-    song_list = insert_ordered(song_list, "Somebody Told Me", "The Killers");
-    song_list = insert_ordered(song_list, "Mr. Blue Sky", "Electric Light Orchestra");
-    song_list = insert_ordered(song_list, "On Melancholy Hill", "Gorillaz");
-    song_list = insert_ordered(song_list, "Snow (Hey Oh)", "Red Hot Chili Peppers");
-    song_list = insert_ordered(song_list, "Clint Eastwood", "Gorillaz");
+    song_list = insert_ordered(song_list, "runaway", "kanye west");
+    song_list = insert_ordered(song_list, "coldest winter", "kanye west");
+    song_list = insert_ordered(song_list, "saint pablo", "kanye west");
+    song_list = insert_ordered(song_list, "blood on the leaves", "kanye west");
+    song_list = insert_ordered(song_list, "basket case", "green day");
+    song_list = insert_ordered(song_list, "fluorescent adolescent", "arctic monkeys");
+    song_list = insert_ordered(song_list, "mr. brightside", "the killers");
+    song_list = insert_ordered(song_list, "clint eastwood", "gorillaz");
+    song_list = insert_ordered(song_list, "champagne supernova", "oasis");
+    song_list = insert_ordered(song_list, "american idiot", "green day");
+    song_list = insert_ordered(song_list, "lift", "radiohead");
+    song_list = insert_ordered(song_list, "21 guns", "green day");
+    song_list = insert_ordered(song_list, "on melancholy hill", "gorillaz");
     printf("List: ");
     print_list(song_list);
 
@@ -62,59 +52,54 @@ int main() {
     print_list(song_list);
 
     printf("___________________________\n\nAdding items in order... [insert_ordered]\n");
-    song_list = insert_ordered(song_list, "Runaway", "Kanye West");
-    song_list = insert_ordered(song_list, "Coldest Winter", "Kanye West");
-    song_list = insert_ordered(song_list, "Saint Pablo", "Kanye West");
-    song_list = insert_ordered(song_list, "Blood On The Leaves", "Kanye West");
-    song_list = insert_ordered(song_list, "Fluorescent Adolescent", "Arctic Monkeys");
-    song_list = insert_ordered(song_list, "Mr. Brightside", "The Killers");
-    song_list = insert_ordered(song_list, "Lift", "Radiohead");
-    song_list = insert_ordered(song_list, "Champagne Supernova", "Oasis");
-    song_list = insert_ordered(song_list, "American Idiot", "Green Day");
-    song_list = insert_ordered(song_list, "Otherside", "Red Hot Chili Peppers");
-    song_list = insert_ordered(song_list, "See You Again", "Tyler, The Creator");
-    song_list = insert_ordered(song_list, "Basket Case", "Green Day");
-    song_list = insert_ordered(song_list, "21 Guns", "Green Day");
-    song_list = insert_ordered(song_list, "Somebody Told Me", "The Killers");
-    song_list = insert_ordered(song_list, "Mr. Blue Sky", "Electric Light Orchestra");
-    song_list = insert_ordered(song_list, "On Melancholy Hill", "Gorillaz");
-    song_list = insert_ordered(song_list, "Snow (Hey Oh)", "Red Hot Chili Peppers");
-    song_list = insert_ordered(song_list, "Clint Eastwood", "Gorillaz");
+    song_list = insert_ordered(song_list, "runaway", "kanye west");
+    song_list = insert_ordered(song_list, "coldest winter", "kanye west");
+    song_list = insert_ordered(song_list, "saint pablo", "kanye west");
+    song_list = insert_ordered(song_list, "blood on the leaves", "kanye west");
+    song_list = insert_ordered(song_list, "basket case", "green day");
+    song_list = insert_ordered(song_list, "fluorescent adolescent", "arctic monkeys");
+    song_list = insert_ordered(song_list, "mr. brightside", "the killers");
+    song_list = insert_ordered(song_list, "clint eastwood", "gorillaz");
+    song_list = insert_ordered(song_list, "champagne supernova", "oasis");
+    song_list = insert_ordered(song_list, "american idiot", "green day");
+    song_list = insert_ordered(song_list, "lift", "radiohead");
+    song_list = insert_ordered(song_list, "21 guns", "green day");
+    song_list = insert_ordered(song_list, "on melancholy hill", "gorillaz");
     printf("List: ");
     print_list(song_list);
 
-    printf("___________________________\n\nFinding song: 'Lift', by Radiohead [find_song]\n");
-    struct song * test = find_song(song_list, "Lift", "Radiohead");
+    printf("___________________________\n\nFinding song: 'lift', by radiohead [find_song]\n");
+    struct song * test = find_song(song_list, "lift", "radiohead");
     printf("List: ");
     print_list(test);
 
-    printf("\nFinding song: 'Runaway', by Kanye West [find_song]\n");
-    test = find_song(song_list, "Runaway", "Kanye West");
+    printf("\nFinding song: 'runaway', by kanye west [find_song]\n");
+    test = find_song(song_list, "runaway", "kanye west");
     printf("List: ");
     print_list(test);
 
-    printf("\nFinding song: 'Devil In A New Dress', by Kanye West [find_song]\n");
-    test = find_song(song_list, "Devil In A New Dress", "Kanye West");
+    printf("\nFinding song: 'devil in a new dress', by kanye west [find_song]\n");
+    test = find_song(song_list, "devil in a new dress", "kanye west");
     printf("List: ");
     print_list(test);
 
-    printf("___________________________\n\nFinding first song by artist: Gorillaz [find_artist]\n");
-    test = find_artist(song_list, "Gorillaz");
+    printf("___________________________\n\nFinding first song by artist: gorillaz [find_artist]\n");
+    test = find_artist(song_list, "gorillaz");
     printf("List: ");
     print_list(test);
 
-    printf("\nFinding first song by artist: Kanye West [find_artist]\n");
-    test = find_artist(song_list, "Kanye West");
+    printf("\nFinding first song by artist: kanye west [find_artist]\n");
+    test = find_artist(song_list, "kanye west");
     printf("List: ");
     print_list(test);
 
-    printf("\nFinding first song by artist: Green Day [find_artist]\n");
-    test = find_artist(song_list, "Green Day");
+    printf("\nFinding first song by artist: green day [find_artist]\n");
+    test = find_artist(song_list, "green day");
     printf("List: ");
     print_list(test);
 
-    printf("\nFinding first song by artist: ABBA [find_artist]\n");
-    test = find_artist(song_list, "ABBA");
+    printf("\nFinding first song by artist: abba [find_artist]\n");
+    test = find_artist(song_list, "abba");
     printf("List: ");
     print_list(test);
 
