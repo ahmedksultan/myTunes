@@ -169,4 +169,14 @@ int main() {
     print_artist(playlist, "rich brian");
 
     print_artist(playlist, "dolly parton");
+
+    printf("Removing 'this love' and '505'...\n\n");
+    delete_song(playlist, "this love", "maroon 5");
+    delete_song(playlist, "505", "arctic monkeys");
+    print_library(playlist);
+
+    printf("Clearing library...\n");
+    clear(playlist);
+    printf("Library:\n");
+    print_library(playlist);
 }

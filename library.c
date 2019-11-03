@@ -76,3 +76,16 @@ struct song * find_artist_lib(library lib, char* artist) {
     struct song * current = lib[ind];
     return find_artist(current, artist);
 }
+
+void delete_song(library lib, char* name, char* artist) {
+    int ind = artist[0] - 'a';
+    if (ind < 0 || ind > 25) ind = 26;
+    lib[ind] = remove_song(lib[ind], find_song(lib[ind], name, artist));
+}
+
+void clear(library lib) {
+    int i;
+    for (i = 0; i < 27; i++) {
+        lib[i] = free_list(lib[i]);
+    }
+}
