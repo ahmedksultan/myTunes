@@ -29,21 +29,21 @@ void print_library(library lib) {
     int i;
     for (i = 0; i < 27; i++) {
         if (lib[i] != NULL) {
-            print_letter(lib, 'a'+i)
+            print_letter(lib, 'a'+i);
         }
     }
     printf("\n");
 }
 
 void print_letter(library lib, char category) {
-    printf("%c: ",'a'+i);
-    print_list(lib[i]);
+    printf("%c: ",category);
+    print_list(lib[category-'a']);
 }
 
 void print_artist(library lib, char* artist) {
     struct song* current = find_artist_lib(lib, artist);
 
-    while (!(current == NULL || strcmp(current->artist, artist)) {
+    while (!(current == NULL || strcmp(current->artist, artist))) {
         printf("%s, by %s | ");
         current = current->next;
     }
