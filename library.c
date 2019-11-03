@@ -17,6 +17,13 @@ Delete a song
 Clear the library.
 --- */
 
-struct song** add_song(library lib, char* name, char* artist) {
+void init_library(library lib) {
+    int i;
+    for (i = 0; i < 27; i++) {
+        lib[i] = NULL;
+    }
+}
+
+void add_song(library lib, char* name, char* artist) {
    insert_ordered(lib[artist[0]-'a'], name, artist);
 }

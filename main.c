@@ -120,4 +120,12 @@ int main() {
     printf("List: ");
     print_list(test);
 
+    song_list = free_list(song_list);
+
+    printf("_____________________________________________\nLIBRARY TESTS\n_____________________________________________\n");
+
+    library playlist;
+    init_library(playlist);
+
+    add_song(playlist, "raised by wolves", "u2");
 }

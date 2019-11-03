@@ -4,6 +4,7 @@
 
 typedef struct song* library[27];
 
-struct song** add_song(library lib, char* name, char* artist);
+void init_library(library lib);
+void add_song(library lib, char* name, char* artist);
 
 #endif
