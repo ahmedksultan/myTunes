@@ -7,7 +7,7 @@
 
 int main() {
     /*
-    
+
     struct song* song_list = NULL;
 
     printf("\nAdding items to list... [insert_front]\n");
@@ -132,5 +132,21 @@ int main() {
     init_library(playlist);
 
     add_song(playlist, "raised by wolves", "u2");
+    add_song(playlist, "505", "arctic monkeys");
+    add_song(playlist, "creep", "radiohead");
+    add_song(playlist, "heartless", "kanye west");
+    add_song(playlist, "do i wanna know?", "arctic monkeys");
+    add_song(playlist, "the middle", "jimmy eat world");
+    add_song(playlist, "mr. brightside", "the killers");
+    add_song(playlist, "amarillion", "datarock");
+    add_song(playlist, "somebody told me", "the killers");
+    add_song(playlist, "street lights", "kanye west");
+    add_song(playlist, "nine in the afternoon", "panic! at the disco");
+    add_song(playlist, "this love", "maroon 5");
+    add_song(playlist, "the sailor", "rich brian");
+    add_song(playlist, "old town road", "lil nas x");
+    add_song(playlist, "blame it on my youth", "blink-182");
+    add_song(playlist, "history", "88rising");
+
     print_library(playlist);
 }
