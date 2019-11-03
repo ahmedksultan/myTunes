@@ -24,6 +24,14 @@ void init_library(library lib) {
     }
 }
 
+void print_library(library lib) {
+    int i;
+    for (i = 0; i < 27; i++) {
+        printf("%c: ",'a'+i);
+        print_list(lib[i]);
+    }
+}
+
 void add_song(library lib, char* name, char* artist) {
-   insert_ordered(lib[artist[0]-'a'], name, artist);
+    lib[artist[0]-'a'] = insert_ordered(lib[artist[0]-'a'], name, artist);
 }

@@ -128,4 +128,5 @@ int main() {
     init_library(playlist);
 
     add_song(playlist, "raised by wolves", "u2");
+    print_library(playlist);
 }
