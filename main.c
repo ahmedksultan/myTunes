@@ -123,7 +123,7 @@ int main() {
     print_list(test);
 
     song_list = free_list(song_list);
-    
+
     */
 
     printf("_____________________________________________\n\nLIBRARY TESTS\n_____________________________________________\n\n");
@@ -146,9 +146,10 @@ int main() {
     add_song(playlist, "the sailor", "rich brian");
     add_song(playlist, "old town road", "lil nas x");
     add_song(playlist, "blame it on my youth", "blink-182");
-    add_song(playlist, "history", "88rising");
+    //add_song(playlist, "history", "88rising");
     add_song(playlist, "wolves", "kanye west");
     add_song(playlist, "wolves", "selena gomez");
+
 
     print_library(playlist);
 
