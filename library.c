@@ -16,3 +16,7 @@ Shuffle - print out a series of randomly chosen songs.
 Delete a song
 Clear the library.
 --- */
+
+struct song** add_song(library lib, char* name, char* artist) {
+   insert_ordered(lib[artist[0]-'a'], name, artist);
+}
