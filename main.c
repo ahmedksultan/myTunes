@@ -146,7 +146,7 @@ int main() {
     add_song(playlist, "the sailor", "rich brian");
     add_song(playlist, "old town road", "lil nas x");
     add_song(playlist, "blame it on my youth", "blink-182");
-    //add_song(playlist, "history", "88rising");
+    add_song(playlist, "history", "88rising");
     add_song(playlist, "wolves", "kanye west");
     add_song(playlist, "wolves", "selena gomez");
 

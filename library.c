@@ -36,8 +36,13 @@ void print_library(library lib) {
 }
 
 void print_letter(library lib, char category) {
+    int ind = category - 'a';
+    if (ind < 0 || ind > 25) {
+        ind = 26;
+        category = '%';
+    }
     printf("%c: ",category);
-    print_list(lib[category-'a']);
+    print_list(lib[ind]);
 }
 
 void print_artist(library lib, char* artist) {
@@ -51,15 +56,21 @@ void print_artist(library lib, char* artist) {
 }
 
 void add_song(library lib, char* name, char* artist) {
-    lib[artist[0]-'a'] = insert_ordered(lib[artist[0]-'a'], name, artist);
+    int ind = artist[0] - 'a';
+    if (ind < 0 || ind > 25) ind = 26;
+    lib[ind] = insert_ordered(lib[ind], name, artist);
 }
 
 struct song * find_song_lib(library lib, char* name, char* artist) {
-    struct song * current = lib[artist[0]-'a'];
+    int ind = artist[0] - 'a';
+    if (ind < 0 || ind > 25) ind = 26;
+    struct song * current = lib[ind];
     return find_song(current, name, artist);
 }
 
 struct song * find_artist_lib(library lib, char* artist) {
-    struct song * current = lib[artist[0]-'a'];
+    int ind = artist[0] - 'a';
+    if (ind < 0 || ind > 25) ind = 26;
+    struct song * current = lib[ind];
     return find_artist(current, artist);
 }
