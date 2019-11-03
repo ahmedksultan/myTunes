@@ -48,8 +48,10 @@ void print_letter(library lib, char category) {
 void print_artist(library lib, char* artist) {
     struct song* current = find_artist_lib(lib, artist);
 
+    printf("songs by %s:\n", artist);
+
     while (!(current == NULL || strcmp(current->artist, artist))) {
-        printf("%s, by %s | ");
+        printf("\t%s\n", current->name);
         current = current->next;
     }
     printf("\n");

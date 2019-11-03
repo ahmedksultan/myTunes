@@ -162,15 +162,11 @@ int main() {
     test2 = find_song_lib(playlist, "devil in a new dress", "kanye west");
     print_list(test2);
 
-    test2 = find_artist_lib(playlist, "kanye west");
-    print_list(test2);
+    print_artist(playlist, "kanye west");
 
-    test2 = find_artist_lib(playlist, "radiohead");
-    print_list(test2);
+    print_artist(playlist, "radiohead");
 
-    test2 = find_artist_lib(playlist, "rich brian");
-    print_list(test2);
+    print_artist(playlist, "rich brian");
 
-    test2 = find_artist_lib(playlist, "dolly parton");
-    print_list(test2);
+    print_artist(playlist, "dolly parton");
 }
