@@ -27,8 +27,10 @@ void init_library(library lib) {
 void print_library(library lib) {
     int i;
     for (i = 0; i < 27; i++) {
-        printf("%c: ",'a'+i);
-        print_list(lib[i]);
+        if (lib[i] != NULL) {
+            printf("%c: ",'a'+i);
+            print_list(lib[i]);
+        }
     }
 }
 
