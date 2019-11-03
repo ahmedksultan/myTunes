@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "library.h"
 #include "list.h"
 
@@ -36,6 +37,16 @@ void print_library(library lib) {
 void print_letter(library lib, char category) {
     printf("%c: ",'a'+i);
     print_list(lib[i]);
+}
+
+void print_artist(library lib, char* artist) {
+    struct song* current = find_artist_lib(lib, artist);
+
+    while (!(current == NULL || strcmp(current->artist, artist)) {
+        printf("%s, by %s | ");
+        current = current->next;
+    }
+    printf("\n");
 }
 
 void add_song(library lib, char* name, char* artist) {
