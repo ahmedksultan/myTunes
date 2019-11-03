@@ -28,10 +28,14 @@ void print_library(library lib) {
     int i;
     for (i = 0; i < 27; i++) {
         if (lib[i] != NULL) {
-            printf("%c: ",'a'+i);
-            print_list(lib[i]);
+            print_letter(lib, 'a'+i)
         }
     }
+}
+
+void print_letter(library lib, char category) {
+    printf("%c: ",'a'+i);
+    print_list(lib[i]);
 }
 
 void add_song(library lib, char* name, char* artist) {
