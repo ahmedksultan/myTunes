@@ -6,6 +6,8 @@
 #include "library.h"
 
 int main() {
+    /*
+    
     struct song* song_list = NULL;
 
     printf("\nAdding items to list... [insert_front]\n");
@@ -121,8 +123,10 @@ int main() {
     print_list(test);
 
     song_list = free_list(song_list);
+    
+    */
 
-    printf("_____________________________________________\nLIBRARY TESTS\n_____________________________________________\n");
+    printf("_____________________________________________\n\nLIBRARY TESTS\n_____________________________________________\n\n");
 
     library playlist;
     init_library(playlist);
