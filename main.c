@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h> 
+#include <time.h>
 #include "list.h"
+#include "library.h"
 
 int main() {
     struct song* song_list = NULL;
@@ -103,7 +104,7 @@ int main() {
     printf("List: ");
     print_list(test);
 
-    srand(time(NULL)); 
+    srand(time(NULL));
     printf("___________________________\n\nFinding random song... [random_song]\n");
     test = random_song(song_list);
     printf("List: ");
