@@ -32,8 +32,19 @@ void print_library(library lib) {
             print_list(lib[i]);
         }
     }
+    printf("\n");
 }
 
 void add_song(library lib, char* name, char* artist) {
     lib[artist[0]-'a'] = insert_ordered(lib[artist[0]-'a'], name, artist);
+}
+
+struct song * find_song_lib(library lib, char* name, char* artist) {
+    struct song * current = lib[artist[0]-'a'];
+    return find_song(current, name, artist);
+}
+
+struct song * find_artist_lib(library lib, char* artist) {
+    struct song * current = lib[artist[0]-'a'];
+    return find_artist(current, artist);
 }
