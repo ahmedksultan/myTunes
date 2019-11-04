@@ -89,3 +89,41 @@ void clear(library lib) {
         lib[i] = free_list(lib[i]);
     }
 }
+
+struct song * shuffle(library lib, int num) {
+    struct song * shufflelist;
+    struct song * iterator;
+    int track_count = 0;
+    int i = 0;
+
+    //  counting how many songs in library
+    for (i = 0; i < 27; i++) {
+        iterator = lib[i];
+        while (iterator != NULL) {
+            track_count++;
+            iterator = iterator->next;
+        }
+    }
+
+    int j = 0;
+    int k = 0;
+    struct song * itr;
+    int track_target;
+    int tracker;
+
+    for (j = 0; j < num; j++) {
+        track_target = (rand() % track_count);
+        tracker = 0;
+        for (k = 0; k < 27; k++) {
+            itr = lib[i];
+            while (itr != NULL) {
+                if (tracker == track_target) {
+                    insert_front(shufflelist, itr->name, itr->artist);
+                    tracker++;
+                }
+                itr = itr->next;
+            }
+        }
+    }
+    return shufflelist;
+}
