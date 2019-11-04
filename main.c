@@ -6,6 +6,8 @@
 #include "library.h"
 
 int main() {
+
+    srand(time(NULL));
     /*
 
     struct song* song_list = NULL;
@@ -106,7 +108,6 @@ int main() {
     printf("List: ");
     print_list(test);
 
-    srand(time(NULL));
     printf("___________________________\n\nFinding random song... [random_song]\n");
     test = random_song(song_list);
     printf("List: ");
@@ -200,6 +201,6 @@ int main() {
     add_song(playlist, "wolves", "kanye west");
     add_song(playlist, "wolves", "selena gomez");
 
-    printf("Shuffling... returning playlist of 9 songs");
+    printf("Shuffling... returning playlist of 9 songs\n");
     shuffle(playlist, 9);
 }

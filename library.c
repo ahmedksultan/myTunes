@@ -90,11 +90,11 @@ void clear(library lib) {
     }
 }
 
-struct song * shuffle(library lib, int num) {
-    struct song * shufflelist;
+void shuffle(library lib, int num) {
+    struct song * shufflelist = NULL;
     struct song * iterator;
     int track_count = 0;
-    int i = 0;
+    int i;
 
     //  counting how many songs in library
     for (i = 0; i < 27; i++) {
@@ -110,20 +110,23 @@ struct song * shuffle(library lib, int num) {
     struct song * itr;
     int track_target;
     int tracker;
+    int found;
 
     for (j = 0; j < num; j++) {
         track_target = (rand() % track_count);
         tracker = 0;
+        found = 0;
         for (k = 0; k < 27; k++) {
-            itr = lib[i];
-            while (itr != NULL) {
+            itr = lib[k];
+            while (!(found || itr == NULL)) {
                 if (tracker == track_target) {
-                    insert_front(shufflelist, itr->name, itr->artist);
-                    tracker++;
+                    shufflelist = insert_front(shufflelist, itr->name, itr->artist);
+                    found = 1;
                 }
+                tracker++;
                 itr = itr->next;
             }
         }
     }
-    return shufflelist;
+    print_list(shufflelist);
 }
