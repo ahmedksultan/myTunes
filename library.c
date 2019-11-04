@@ -28,7 +28,7 @@ void init_library(library lib) {
 void print_library(library lib) {
     int i;
     for (i = 0; i < 27; i++) {
-        if (lib[i] != NULL) {
+        if (lib[i]) {
             print_letter(lib, 'a'+i);
         }
     }
@@ -50,7 +50,7 @@ void print_artist(library lib, char* artist) {
 
     printf("songs by %s:\n", artist);
 
-    while (!(current == NULL || strcmp(current->artist, artist))) {
+    while (current && !strcmp(current->artist, artist)) {
         printf("\t%s\n", current->name);
         current = current->next;
     }
@@ -99,7 +99,7 @@ void shuffle(library lib, int num) {
     //  counting how many songs in library
     for (i = 0; i < 27; i++) {
         iterator = lib[i];
-        while (iterator != NULL) {
+        while (iterator) {
             track_count++;
             iterator = iterator->next;
         }
@@ -118,7 +118,7 @@ void shuffle(library lib, int num) {
         found = 0;
         for (k = 0; k < 27; k++) {
             itr = lib[k];
-            while (!(found || itr == NULL)) {
+            while (!found && itr) {
                 if (tracker == track_target) {
                     shufflelist = insert_front(shufflelist, itr->name, itr->artist);
                     found = 1;

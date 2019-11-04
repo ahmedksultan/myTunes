@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h> 
+#include <time.h>
 #include "list.h"
 
 /* --- INSTRUCTIONS ---
@@ -17,7 +17,7 @@ free the entire list [completed]
 --- INSTRUCTIONS --- */
 
 void print_list(struct song* list) {
-    while (list != NULL) {
+    while (list) {
         printf("%s, by %s | ", list->name, list->artist );
         list = list->next;
     }
@@ -28,7 +28,7 @@ struct song* insert_front(struct song* list, char* name, char* artist) {
     struct song* new = malloc(sizeof(struct song));
     strcpy(new->name, name);
     strcpy(new->artist, artist);
-    new->next = list; 
+    new->next = list;
     return new;
 }
 
@@ -36,7 +36,7 @@ struct song* insert_ordered(struct song* list, char* name, char* artist) {
     struct song* current = list;
     struct song* prev = NULL;
 
-    if (current == NULL) {
+    if (!current) {
         return insert_front(list, name, artist);
     }
 
@@ -47,7 +47,7 @@ struct song* insert_ordered(struct song* list, char* name, char* artist) {
         return insert_front(list, name, artist);
     }
 
-    while (current != NULL) {
+    while (current) {
         cmpArtist = strcmp(artist, current->artist);
         cmpName = strcmp(name, current->name);
         if (cmpArtist < 0 || (cmpArtist == 0 && cmpName < 0)) {
@@ -66,14 +66,14 @@ struct song* insert_ordered(struct song* list, char* name, char* artist) {
 }
 
 struct song* remove_song(struct song* list, struct song* target) {
-    if (list == NULL) return list;
+    if (!list) return list;
     if (list == target) {
       struct song* start = list->next;
       free(list);
       return start;
     }
     struct song* current = list;
-    while (current->next != NULL) {
+    while (current->next) {
         if (current->next == target) {
             current->next = target->next;
             free(target);
@@ -85,14 +85,14 @@ struct song* remove_song(struct song* list, struct song* target) {
 }
 
 struct song* free_list(struct song* list) {
-    while (list != NULL) {
+    while (list) {
         list = remove_song(list, list);
     }
     return list;
 }
 
 struct song * find_song(struct song * list, char * name, char * artist) {
-    while (list != NULL) {
+    while (list) {
         if (!(strcmp(list->name, name) || strcmp(list->artist, artist))) {
             return list;
         }
@@ -102,7 +102,7 @@ struct song * find_song(struct song * list, char * name, char * artist) {
 }
 
 struct song * find_artist(struct song * list, char * artist) {
-    while(list != NULL) {
+    while(list) {
         if (strcmp(list->artist, artist) == 0) {
             return list;
         }
@@ -114,13 +114,13 @@ struct song * find_artist(struct song * list, char * artist) {
 struct song * random_song(struct song * list) {
     struct song * list2 = list;
     int track_count = 0;
-    while(list != NULL) {
+    while(list) {
         track_count = track_count + 1;
         list = list->next;
     }
     int track_target = (rand() % track_count);
     int ctr = 0;
-    while(list2 != NULL) {
+    while(list2) {
         if (ctr == track_target) {
             return list2;
         }
