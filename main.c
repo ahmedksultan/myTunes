@@ -8,9 +8,10 @@
 int main() {
 
     srand(time(NULL));
-    /*
 
     struct song* song_list = NULL;
+
+    printf("_____________________________________________\n\nLINKED LIST TESTS\n_____________________________________________\n\n");
 
     printf("\nAdding items to list... [insert_front]\n");
     song_list = insert_front(song_list, "runaway", "kanye west");
@@ -125,13 +126,13 @@ int main() {
 
     song_list = free_list(song_list);
 
-    */
-
     printf("_____________________________________________\n\nLIBRARY TESTS\n_____________________________________________\n\n");
 
     library playlist;
     init_library(playlist);
 
+    printf("\nAdding songs to library... [add_song]");
+
     add_song(playlist, "raised by wolves", "u2");
     add_song(playlist, "505", "arctic monkeys");
     add_song(playlist, "creep", "radiohead");
@@ -151,37 +152,44 @@ int main() {
     add_song(playlist, "wolves", "kanye west");
     add_song(playlist, "wolves", "selena gomez");
 
-
+    printf("\nPrinting ibrary... [print_library]");
     print_library(playlist);
 
     struct song * test2 = find_song_lib(playlist, "wolves", "kanye west");
+    printf("\nFinding 'wolves' by kanye west... [find_song_lib]");
     print_list(test2);
 
     test2 = find_song_lib(playlist, "wolves", "selena gomez");
+    printf("\nFinding 'wolves' by selena gomez... [find_song_lib]");
     print_list(test2);
 
     test2 = find_song_lib(playlist, "devil in a new dress", "kanye west");
+    printf("\nFinding 'devil in a new dress' by kanye west... [find_song_lib]");
     print_list(test2);
 
+    printf("\nReturning songs by kanye west... [print_artist]");
     print_artist(playlist, "kanye west");
 
+    printf("\nReturning songs by radiohead... [print_artist]");
     print_artist(playlist, "radiohead");
 
+    printf("\nReturning songs by rich brian... [print_artist]");
     print_artist(playlist, "rich brian");
 
+    printf("\nReturning songs by dolly parton... [print_artist]");
     print_artist(playlist, "dolly parton");
 
-    printf("Removing 'this love' and '505'...\n\n");
+    printf("Removing 'this love' and '505'... [delete_song]\n\n");
     delete_song(playlist, "this love", "maroon 5");
     delete_song(playlist, "505", "arctic monkeys");
     print_library(playlist);
 
-    printf("Clearing library...\n");
+    printf("Clearing library... [clear]\n");
     clear(playlist);
     printf("Library:\n");
     print_library(playlist);
 
-    printf("Adding songs...\n");
+    printf("Adding songs... [add_song]\n");
     add_song(playlist, "raised by wolves", "u2");
     add_song(playlist, "505", "arctic monkeys");
     add_song(playlist, "creep", "radiohead");
@@ -201,6 +209,13 @@ int main() {
     add_song(playlist, "wolves", "kanye west");
     add_song(playlist, "wolves", "selena gomez");
 
-    printf("Shuffling... returning playlist of 9 songs\n");
+    printf("\n");
+
+    printf("Shuffling... returning playlist of 9 songs [shuffle]\n");
     shuffle(playlist, 9);
+
+    printf("\n");
+
+    printf("Shuffling... returning playlist of 5 songs [shuffle]\n");
+    shuffle(playlist, 5);
 }
