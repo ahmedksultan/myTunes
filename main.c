@@ -218,4 +218,5 @@ int main() {
 
     printf("Shuffling... returning playlist of 5 songs [shuffle]\n");
     shuffle(playlist, 5);
+    clear(playlist);
 }
