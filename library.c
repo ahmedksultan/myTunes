@@ -129,4 +129,5 @@ void shuffle(library lib, int num) {
         }
     }
     print_list(shufflelist);
+    free_list(shufflelist);
 }
